@@ -9,7 +9,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   background: #e1ccc1;
-  padding: 2rem 4rem;
+  padding: 1rem 3rem;
 }
 
 nav {
@@ -70,6 +70,9 @@ nav .signup-nav ul li a {
 nav .menu-nav {
   display: none;
 }
+nav .mobile-menu {
+  display: none;
+}
 
 .hero-container {
   display: flex;
@@ -119,6 +122,7 @@ nav .menu-nav {
 }
 .hero-container .hero-image {
   width: 30%;
+  height: 420px;
 }
 .hero-container .hero-image img {
   width: 100%;
@@ -139,7 +143,18 @@ footer .footer-icons {
   align-items: center;
 }
 
-@media only screen and (max-width: 600px) {
+.show {
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 0.5rem 1.5rem;
+  }
+
+  nav {
+    position: relative;
+  }
   nav .mid-nav {
     display: none;
   }
@@ -148,6 +163,39 @@ footer .footer-icons {
   }
   nav .menu-nav {
     display: block;
+  }
+  nav .menu-nav .mobile-menu {
+    position: absolute;
+    display: none;
+    width: 100%;
+    border-radius: 5px;
+    padding: 2rem;
+    background: #f5f5f5;
+    top: 0;
+    left: 0;
+  }
+  nav .menu-nav .mobile-menu .list-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  nav .menu-nav .mobile-menu .list-title h2 {
+    color: #737176;
+  }
+  nav .menu-nav .mobile-menu ul li {
+    list-style: none;
+  }
+  nav .menu-nav .mobile-menu ul li a {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #737176;
+    margin-bottom: 10px;
+  }
+  nav .menu-nav .mobile-menu ul li a div {
+    margin-left: 20px;
   }
 
   .hero-container .hero-text {
@@ -159,6 +207,11 @@ footer .footer-icons {
   }
   .hero-container .hero-text .reviews {
     width: 100%;
+    font-size: 10px;
+  }
+  .hero-container .hero-text .reviews .review-icons img {
+    width: 10px;
+    height: 10px;
   }
   .hero-container .hero-image {
     display: none;
@@ -167,5 +220,29 @@ footer .footer-icons {
   footer div {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 1163px) {
+  .hero-container .hero-text .reviews {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .hero-container .hero-text .reviews {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .hero-container .hero-text .reviews {
+    width: 80%;
+    font-size: 10px;
+  }
+  .hero-container .hero-text .reviews .review-icons img {
+    width: 10px;
+    height: 10px;
+  }
+
+  footer .footer-icons img {
+    width: 120px;
   }
 }/*# sourceMappingURL=style.css.map */

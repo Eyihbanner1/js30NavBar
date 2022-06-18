@@ -1,189 +1,287 @@
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-    $text-color: #737176;
-    $btn-color: #1a3622;
-    $text-white: #f5f5f5;
-    $text-yellow: #f79c33;
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        font-family: 'Poppins', sans-serif;
-        font-size: 16px;
-        background: #e1ccc1;
-        padding: 2rem 4rem;
-    }
-    
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 2rem;
-        .mid-nav {
-            ul {
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+            $text-color: #737176;
+            $btn-color: #1a3622;
+            $text-white: #f5f5f5;
+            $text-yellow: #f79c33;
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                font-family: 'Poppins', sans-serif;
+                font-size: 16px;
+                background: #e1ccc1;
+                padding: 1rem 3rem;
+            }
+            
+            nav {
                 display: flex;
+                justify-content: space-between;
                 align-items: center;
-                list-style: none;
-                li {
-                    a {
-                        text-decoration: none;
-                        color: $text-color;
-                        padding: 0.5rem 1rem;
-                    }
-                }
-                .product-link {
-                    transition: all 0.3s ease-in-out;
-                    .product-container {
-                        position: absolute;
-                        top: 10%;
-                        width: 30%;
-                        background: $text-white;
-                        border-radius: 5px;
-                        box-shadow: 0 10px 10px 10px rgba($color: #ffffff, $alpha: 0.2);
-                        display: none;
-                        .product-option {
-                            display: flex;
-                            align-items: flex-start;
-                            justify-content: space-between;
-                            p {
-                                font-size: 14px;
+                margin-bottom: 2rem;
+                .mid-nav {
+                    ul {
+                        display: flex;
+                        align-items: center;
+                        list-style: none;
+                        li {
+                            a {
+                                text-decoration: none;
+                                color: $text-color;
+                                padding: 0.5rem 1rem;
+                            }
+                        }
+                        .product-link {
+                            transition: all 0.3s ease-in-out;
+                            .product-container {
+                                position: absolute;
+                                top: 10%;
+                                width: 30%;
+                                background: $text-white;
+                                border-radius: 5px;
+                                box-shadow: 0 10px 10px 10px rgba($color: #ffffff, $alpha: 0.2);
+                                display: none;
+                                .product-option {
+                                    display: flex;
+                                    align-items: flex-start;
+                                    justify-content: space-between;
+                                    p {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                            &:hover {
+                                .product-container {
+                                    display: flex;
+                                    flex-direction: column;
+                                }
                             }
                         }
                     }
-                    &:hover {
-                        .product-container {
+                }
+                .signup-nav {
+                    ul {
+                        display: flex;
+                        align-items: center;
+                        list-style: none;
+                        li {
+                            .free-btn {
+                                background: $btn-color;
+                                color: $text-white;
+                                border-radius: 5px;
+                            }
+                            a {
+                                text-decoration: none;
+                                color: $text-color;
+                                padding: 1rem 1rem;
+                            }
+                        }
+                    }
+                }
+                .menu-nav {
+                    display: none;
+                }
+                .mobile-menu {
+                    display: none;
+                }
+            }
+            
+            .hero-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 5rem;
+                margin-bottom: 5rem;
+                .hero-text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    h1 {
+                        font-size: 4rem;
+                        font-weight: 600;
+                        color: #000;
+                        margin-bottom: 1rem;
+                        span {
+                            color: $text-yellow;
+                        }
+                    }
+                    p {
+                        color: $text-color;
+                        letter-spacing: 0.5px;
+                    }
+                    a {
+                        background: $btn-color;
+                        color: $text-white;
+                        border-radius: 5px;
+                        text-decoration: none;
+                        padding: 1rem 1rem;
+                        margin-top: 1rem;
+                        margin-bottom: 1rem;
+                        width: 120px;
+                    }
+                    .reviews {
+                        width: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .review-icon {
                             display: flex;
-                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-around;
+                        }
+                    }
+                }
+                .hero-image {
+                    width: 30%;
+                    height: 420px;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            
+            footer {
+                display: flex;
+                flex-direction: column;
+                p {
+                    text-align: center;
+                    color: $text-color;
+                    margin-bottom: 3rem;
+                }
+                .footer-icons {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+            }
+            
+            .show {
+                display: block;
+            }
+            
+            @media only screen and(max-width:768px) {
+                body {
+                    padding: 0.5rem 1.5rem;
+                }
+                nav {
+                    position: relative;
+                    .mid-nav {
+                        display: none;
+                    }
+                    .signup-nav {
+                        display: none;
+                    }
+                    .menu-nav {
+                        display: block;
+                        .mobile-menu {
+                            position: absolute;
+                            display: none;
+                            width: 100%;
+                            border-radius: 5px;
+                            padding: 2rem;
+                            background: $text-white;
+                            top: 0;
+                            left: 0;
+                            .list-title {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-bottom: 10px;
+                                h2 {
+                                    color: $text-color;
+                                }
+                            }
+                            ul {
+                                li {
+                                    list-style: none;
+                                    a {
+                                        display: flex;
+                                        align-items: flex-start;
+                                        justify-content: space-between;
+                                        text-decoration: none;
+                                        color: $text-color;
+                                        margin-bottom: 10px;
+                                        div {
+                                            margin-left: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .hero-container {
+                    .hero-text {
+                        width: 100%;
+                        h1 {
+                            font-size: 38px;
+                            line-height: 1.2;
+                        }
+                        .reviews {
+                            width: 100%;
+                            font-size: 10px;
+                            .review-icons {
+                                img {
+                                    width: 10px;
+                                    height: 10px;
+                                }
+                            }
+                        }
+                    }
+                    .hero-image {
+                        display: none;
+                    }
+                }
+                footer {
+                    div {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+            
+            @media only screen and (max-width:1163px) {
+                .hero-container {
+                    .hero-text {
+                        .reviews {
+                            width: 60%;
                         }
                     }
                 }
             }
-        }
-        .signup-nav {
-            ul {
-                display: flex;
-                align-items: center;
-                list-style: none;
-                li {
-                    .free-btn {
-                        background: $btn-color;
-                        color: $text-white;
-                        border-radius: 5px;
-                    }
-                    a {
-                        text-decoration: none;
-                        color: $text-color;
-                        padding: 1rem 1rem;
+            
+            @media only screen and (max-width:950px) {
+                .hero-container {
+                    .hero-text {
+                        .reviews {
+                            width: 70%;
+                        }
                     }
                 }
             }
-        }
-        .menu-nav {
-            display: none;
-        }
-    }
-    
-    .hero-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-        .hero-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            h1 {
-                font-size: 4rem;
-                font-weight: 600;
-                color: #000;
-                margin-bottom: 1rem;
-                span {
-                    color: $text-yellow;
+            
+            @media only screen and (max-width:420px) {
+                .hero-container {
+                    .hero-text {
+                        .reviews {
+                            width: 80%;
+                            font-size: 10px;
+                            .review-icons {
+                                img {
+                                    width: 10px;
+                                    height: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+                footer {
+                    .footer-icons {
+                        img {
+                            width: 120px;
+                        }
+                    }
                 }
             }
-            p {
-                color: $text-color;
-                letter-spacing: 0.5px;
-            }
-            a {
-                background: $btn-color;
-                color: $text-white;
-                border-radius: 5px;
-                text-decoration: none;
-                padding: 1rem 1rem;
-                margin-top: 1rem;
-                margin-bottom: 1rem;
-                width: 120px;
-            }
-            .reviews {
-                width: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                .review-icon {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-around;
-                }
-            }
-        }
-        .hero-image {
-            width: 30%;
-            img {
-                width: 100%;
-            }
-        }
-    }
-    
-    footer {
-        display: flex;
-        flex-direction: column;
-        p {
-            text-align: center;
-            color: $text-color;
-            margin-bottom: 3rem;
-        }
-        .footer-icons {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-    }
-    
-    @media only screen and(max-width:600px) {
-        nav {
-            .mid-nav {
-                display: none;
-            }
-            .signup-nav {
-                display: none;
-            }
-            .menu-nav {
-                display: block;
-            }
-        }
-        .hero-container {
-            .hero-text {
-                width: 100%;
-                h1 {
-                    font-size: 38px;
-                    line-height: 1.2;
-                }
-                .reviews {
-                    width: 100%;
-                }
-            }
-            .hero-image {
-                display: none;
-            }
-        }
-        footer {
-            div {
-                display: flex;
-                flex-wrap: wrap;
-            }
-        }
-    }

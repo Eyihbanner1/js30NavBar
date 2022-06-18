@@ -13,7 +13,7 @@
 <body>
     <nav>
         <div class="logo">
-            <img src="./Assets/Logo.svg" alt="">
+            <img src="./Assets/Logo.svg" alt="logo">
         </div>
         <div class="mid-nav">
             <ul>
@@ -21,7 +21,7 @@
                     <ul class="product-container">
                         <li>
                             <a href="#" class="product-option">
-                                <img src=" ./Assets/Spense_Icon.svg " alt=" ">
+                                <img src=" ./Assets/Spense_Icon.svg " alt="spense icon">
                                 <div>
                                     <h4>Spense</h4>
                                     <p>Spense is a landing page for writers. Great for practicing absolute positioning and flex layouts</p>
@@ -30,7 +30,7 @@
                         </li>
                         <li>
                             <a href="# " class="product-option">
-                                <img src="./Assets/Fiber_Icon.svg" alt="">
+                                <img src="./Assets/Fiber_Icon.svg" alt="Fiber icon">
                                 <div>
                                     <h4>Fiber Landing Page</h4>
                                     <p>An online portfolio generator. Great to practice flex/grid layouts, and absolute positioning</p>
@@ -39,7 +39,7 @@
                         </li>
                         <li>
                             <a href="#" class="product-option">
-                                <img src=" ./Assets/Gradie_Icon.svg " alt=" ">
+                                <img src=" ./Assets/Gradie_Icon.svg " alt="Gradie icon">
                                 <div>
                                     <h4>Gradie Sign Up Page</h4>
                                     <p>Gradie is a simple sign up page, great to practice centering layouts</p>
@@ -61,9 +61,50 @@
             </ul>
         </div>
         <div class="menu-nav ">
-            <a href="#"><img src="./Assets/Menu.svg " alt=" "></a>
+            <a href="#" id="menu-btn"><img src="./Assets/Menu.svg " alt="menu icon"></a>
+
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="list-title">
+                    <h2>Products</h2>
+                    <a href="#" id="close-btn"><img src="./Assets/Close.svg" alt="close icon"></a>
+
+                </div>
+                <div>
+                    <ul class="product-container">
+                        <li>
+                            <a href="#" class="product-option">
+                                <img src=" ./Assets/Spense_Icon.svg " alt="spense icon">
+                                <div>
+                                    <h4>Spense</h4>
+                                    <p>Spense is a landing page for writers. Great for practicing absolute positioning and flex layouts</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="# " class="product-option">
+                                <img src="./Assets/Fiber_Icon.svg" alt="fiber icon">
+                                <div>
+                                    <h4>Fiber Landing Page</h4>
+                                    <p>An online portfolio generator. Great to practice flex/grid layouts, and absolute positioning</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="product-option">
+                                <img src=" ./Assets/Gradie_Icon.svg " alt="gradie icon">
+                                <div>
+                                    <h4>Gradie Sign Up Page</h4>
+                                    <p>Gradie is a simple sign up page, great to practice centering layouts</p>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
 
         </div>
+
     </nav>
     <main>
         <section class="hero-container ">
@@ -72,15 +113,15 @@
                 <p>
                     Ondeck is a service that allows you to create beautiful, online, and encrypted video calls for <br> you and your remote team.
                 </p>
-                <a href=" ">Try for Free</a>
-                <div class="reviews ">
+                <a href="#">Try for Free</a>
+                <div class="reviews">
                     <div class="review-text ">
                         <p>5.0 Ratings based on reviews from:</p>
                     </div>
                     <div class="review-icons ">
-                        <img src="./Assets/Capterra Logo.svg " alt=" ">
-                        <img src="./Assets/AlternativeTo Logo.svg " alt=" ">
-                        <img src="./Assets/Capterra Logo.svg " alt=" ">
+                        <img src="./Assets/Capterra Logo.svg " alt="capterra logo">
+                        <img src="./Assets/AlternativeTo Logo.svg " alt="alternative icon ">
+                        <img src="./Assets/Capterra Logo.svg " alt="capterra logo ">
                     </div>
                 </div>
 
@@ -101,6 +142,8 @@
             <img src="./Assets/Walmart Logo.svg " alt="walmart logo ">
         </div>
     </footer>
+
+    <script src="./app.js"></script>
 </body>
 
 </html>
